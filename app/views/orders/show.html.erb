@@ -6,6 +6,9 @@
 
   <div class="order-summary jumbotron">
     <h4>Thank you for your order!</h4>
+    <p>Your receipt has been emailed to you at: 
+      <%= @order.email %>
+    </p>
   </div>
 
   <!--added-->
@@ -20,8 +23,9 @@
         </tr>
       </thead>
       <tbody>
-        <% enhanced_cart.each do |item| %>
-          <%= render 'item', product: item[:product], quantity: item[:quantity].to_i %>
+        <%= @order.total_cents.inspect %>
+        <% @order.line_items.each do |item| %>
+          <%= render 'item', product: item.product, quantity: item.quantity.to_i %>
         <% end %>
       </tbody>
       <tfoot>
@@ -30,7 +34,7 @@
             TOTAL:
           </th>
           <th>
-            <%= humanized_money_with_symbol cart_subtotal_cents / 100.00 %>
+            <%= humanized_money_with_symbol @order.total_cents / 100.00 %>
           </th>
         </tr>
       </tfoot>
