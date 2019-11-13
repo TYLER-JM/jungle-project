@@ -17,6 +17,11 @@ Rails.application.routes.draw do
     resources :products, except: [:edit, :update, :show]
   end
 
+  # resource :about, only: :show
+  
+  # below to tell rails not to pluralize the controller we are looking for
+  get '/about', to: 'about#show'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
