@@ -1,2 +1,36 @@
-<h1>Admin::Dashboard#show</h1>
-<p>Find me in app/views/admin/dashboard/show.html.erb</p>
+<h1>Analytics</h1>
+<p>In depth analytics to help you grow your business. On demand!</p>
+
+<!--added-->
+  <div class="panel panel-default items">
+    <table class="table table-bordered">
+      <thead>
+        <tr>          
+          <th>Number of unique Pruduits</th>
+          <th><%= @product_count %></th>
+        </tr>
+      </thead>
+      <thead>
+        <tr>          
+          <th>Total Pruduits</th>
+          <th><%= @total %></th>
+        </tr>
+      </thead>
+      <tfoot>
+        <tr>
+          <th>
+            Number of Categories
+          </th>
+          <th>
+            <%= @category_count %>
+          </th>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+
+  <!---->
+  <%= link_to "More analytics", '/admin/products', class: 'btn btn-lg btn-primary' %>
+
+
+
