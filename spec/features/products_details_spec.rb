@@ -26,8 +26,8 @@ RSpec.feature "ProductsDetails", type: :feature, js: true do
       click_on("Details")
       # sleep 1
       page.should have_content
-      puts page.html
-      # save_screenshot
+      # puts page.html
+      save_screenshot
     end
 
     # DEBUG / VERIFY
