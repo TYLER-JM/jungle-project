@@ -4,7 +4,7 @@ A mini e-commerce application built with Rails 4.2. Using Stripe to order items 
 
 ## The Product
 
-Navigating the site, and adding items to the cart.
+Navigating the page, and adding items to the cart.
 
 ![Navigating the site](./docs/navigation-add-to-cart.gif)
 
